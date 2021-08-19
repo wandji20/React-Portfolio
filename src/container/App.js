@@ -1,8 +1,12 @@
-import Nav from '../components/Nav';
+import Intro from './Intro';
+import Nav from './Nav';
 
 function App() {
   return (
-    <Nav />
+    <>
+      <Nav />
+      <Intro />
+    </>
   );
 }
 
