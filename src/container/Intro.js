@@ -2,8 +2,8 @@ import React from 'react';
 import ContactLinks from '../components/ContactLinks';
 
 const Intro = () => (
-  <section id="home">
-    <div className="main pt-3 container-fluid">
+  <section id="home" className="container-fluid">
+    <div className="main">
       <h2>hi there!</h2>
       <h3>
         <span>I am Wandji Bertrand,</span>

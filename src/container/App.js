@@ -1,6 +1,8 @@
+import Contact from './Contact';
 import Intro from './Intro';
 import Nav from './Nav';
 import Projects from './Projects';
+import Skills from './Skills';
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Nav />
       <Intro />
       <Projects />
+      <Skills />
+      <Contact />
     </>
   );
 }
