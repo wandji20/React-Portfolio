@@ -23,13 +23,8 @@ body {
   max-width: 100%;
 }
 
-/* .container-fluid {
-  padding-left: 30px;
-  padding-right: 30px;
-} */
 .navbar-brand {
   font-weight: 600;
-  /* font-size: 35px; */
   transition: transform 0.75s;
 }
 
@@ -75,20 +70,30 @@ body {
 }
 
 #home h2,
-#projects h3 {
+#projects h3,
+#skills h3,
+#contact h3,
+.form {
   color: #0760fe;
   font-family: "Roboto Mono", monospace;
 }
 
+.form {
+  width: 85%;
+  font-weight: 600;
+}
+
+.submit-btn {
+  font-weight: 600;
+}
+
 #home .d-block {
-  /* font-size: 35px; */
   font-weight: 600;
 }
 
 .project-links a span,
 .project-links a i,
 .contact-links a {
-  /* font-size: 25px; */
   text-decoration: none;
   color: #c5c5c5;
   transition: 0.75s;

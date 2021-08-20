@@ -1,20 +1,20 @@
 import React from 'react';
 
 const Skills = () => (
-  <section id="skills" className="container-fluid d-flex flex-column">
+  <section id="skills" className="container-fluid d-flex flex-column px-3 py-2">
     <h3 className="">Skills</h3>
     <hr />
     <div className="skills d-flex ">
-      <div>
-        <h4>ROR</h4>
-        <h4>Ruby</h4>
-        <h4>JavaScript</h4>
-        <h4>HTML</h4>
+      <div className="mr-3">
+        <h6>ROR</h6>
+        <h6>Ruby</h6>
+        <h6>JavaScript</h6>
+        <h6>HTML</h6>
       </div>
       <div>
-        <h4>CSS</h4>
-        <h4>Bootstrap</h4>
-        <h4>Webpack</h4>
+        <h6>CSS</h6>
+        <h6>Bootstrap</h6>
+        <h6>Webpack</h6>
       </div>
     </div>
   </section>
