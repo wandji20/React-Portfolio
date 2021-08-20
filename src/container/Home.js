@@ -2,10 +2,10 @@ import React from 'react';
 import ContactLinks from '../components/ContactLinks';
 
 const Home = () => (
-  <section id="home" className="container-fluid px-5 py-3">
+  <section id="home" className="container-fluid px-3 py-2">
     <div className="py-2">
       <h2>hi there!</h2>
-      <h3 className="py-5">
+      <h3 className="py-3">
         <span className="d-block py-2 ">I am Wandji Bertrand,</span>
         <span className="d-block py-2">a software developer living in Cameroon.</span>
         <span className="d-block py-2">Open to new roles.</span>

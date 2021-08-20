@@ -7,26 +7,29 @@ const Project = (props) => {
   const {
     title, url, live, source, description, stacks,
   } = project;
-  return (
-    <article className="">
 
-      <div className="">
-        <div>
+  return (
+    <article className="my-1">
+
+      <div className="d-flex align-items-center flex-column">
+        <div className="col-sm-12 col-md-6 my-1">
           <img src={url} alt="" className="img-fluid img4 article-img" />
         </div>
-        <div className="project-content">
-          <div>
-            <h5 className="project-title">{title}</h5>
+        <div className="col-sm-12 col-md-6 pt-1 my-1">
+          <div className="d-flex flex-column">
+            <h5 className="project-title ">{title}</h5>
             <p>
               {description}
             </p>
             <Stacks stacks={stacks} />
             <p className="project-links">
-              <a href={source} target="_blank" rel="noreferrer">
-                <span>Source Code  icon</span>
+              <a className="inline-block mr-3" href={source} target="_blank" rel="noreferrer">
+                <span>source code</span>
+                <i className="pl-1 fab fa-github" />
               </a>
-              <a href={live} target="_blank" rel="noreferrer">
-                <span>live icon</span>
+              <a className="inline-block" href={live} target="_blank" rel="noreferrer">
+                <span>live</span>
+                <i className="pl-1 fas fa-eye" />
               </a>
             </p>
           </div>

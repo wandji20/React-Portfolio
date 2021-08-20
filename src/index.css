@@ -29,7 +29,7 @@ body {
 } */
 .navbar-brand {
   font-weight: 600;
-  font-size: 35px;
+  /* font-size: 35px; */
   transition: transform 0.75s;
 }
 
@@ -40,7 +40,8 @@ body {
   transition: transform 0.75s;
 }
 
-.nav-item {
+.nav-item,
+.project-title {
   color: #c5c5c5;
   font-family: "Roboto Mono", monospace;
 }
@@ -62,32 +63,53 @@ body {
 .navbar-brand:hover {
   transform: scale(0.75);
 }
-.navbar-brand a:hover {
-  color: #0760fe;
+.project-links a:hover {
+  text-decoration: none;
 }
 
-#home h2 {
+.project-links a span:hover,
+.project-links a i:hover,
+.navbar-brand a:hover {
+  color: #0760fe;
+  text-decoration: none;
+}
+
+#home h2,
+#projects h3 {
   color: #0760fe;
   font-family: "Roboto Mono", monospace;
 }
 
 #home .d-block {
-  font-size: 35px;
+  /* font-size: 35px; */
   font-weight: 600;
 }
 
+.project-links a span,
+.project-links a i,
 .contact-links a {
-  font-size: 25px;
+  /* font-size: 25px; */
+  text-decoration: none;
   color: #c5c5c5;
   transition: 0.75s;
 }
 
+.stacks .btn {
+  transition: 0.5s;
+  background: #c5c5c5;
+  font-size: 15px;
+}
+
+.stacks .btn:hover {
+  color: #0760fe;
+  background: #1a1a1a;
+}
 .contact-links a:hover {
   color: #0760fe;
 }
-/* hr {
-  border-top: 1px solid white;
-} */
+hr {
+  border-top: 2px solid#c5c5c5;
+}
 
 /* .nav-link:hover {
   font-size: 20px;
