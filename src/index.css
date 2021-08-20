@@ -9,7 +9,6 @@ body {
   font-size: 18px;
   color: #c5c5c5;
   background: #1a1a1a;
-  border: 1px solid green;
 }
 
 #root {
@@ -46,27 +45,16 @@ body {
   color: #0760fe;
 }
 
-#header,
+/* #header,
 #home,
 #projects,
 #skills,
 #contact {
   border: 1px solid red;
-  /* margin-top: 5px; */
-}
+} */
 
 .navbar-brand:hover {
   transform: scale(0.75);
-}
-.project-links a:hover {
-  text-decoration: none;
-}
-
-.project-links a span:hover,
-.project-links a i:hover,
-.navbar-brand a:hover {
-  color: #0760fe;
-  text-decoration: none;
 }
 
 #home h2,
@@ -85,6 +73,8 @@ body {
 
 .submit-btn {
   font-weight: 600;
+  background: #c5c5c5;
+  text-shadow: none;
 }
 
 #home .d-block {
@@ -99,6 +89,14 @@ body {
   transition: 0.75s;
 }
 
+.project-links a span:hover,
+.project-links a i:hover,
+.navbar-brand a:hover,
+.contact-links a:hover {
+  color: #0760fe;
+  text-decoration: none;
+}
+
 .stacks .btn {
   transition: 0.5s;
   background: #c5c5c5;
@@ -109,34 +107,49 @@ body {
   color: #0760fe;
   background: #1a1a1a;
 }
-.contact-links a:hover {
-  color: #0760fe;
-}
+
 hr {
   border-top: 2px solid#c5c5c5;
 }
 
-/* .nav-link:hover {
-  font-size: 20px;
-} */
+@media screen and (min-width: 600px) {
+  .project {
+    font-size: 20px;
+  }
 
-/* .main-icons a,
-.icons a {
-  margin-right: 20px;
-} */
+  .skills h6 {
+    font-size: 22px;
+  }
 
-/* .main h2,
-#skills h3,
-#projects h2,
-#projects h3,
-#contact h3 {
-  font-family: "Roboto Mono", monospace;
-  color: #0760fe;
-  font-weight: 500;
-  font-size: 24px;
+  .project h5 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  #home h3 {
+    font-size: 35px;
+  }
+  #home h2,
+  #projects h3,
+  #skills h3,
+  #contact h3 {
+    font-size: 30px;
+  }
+
+  .contact-text {
+    font-family: "Roboto Mono", monospace;
+    font-size: 22px;
+    line-height: 2;
+  }
+
+  .contact-links {
+    font-size: 25px;
+  }
 }
 
-.main span {
-  display: block;
-  font-size: 30px;
+/* @media screen and (min-width: 998px) {
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 } */

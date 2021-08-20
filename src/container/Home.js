@@ -2,7 +2,7 @@ import React from 'react';
 import ContactLinks from '../components/ContactLinks';
 
 const Home = () => (
-  <section id="home" className="container-fluid px-3 py-2">
+  <section id="home" className="container-fluid px-3 py-2 mx-md-1">
     <div className="py-2">
       <h2>hi there!</h2>
       <h3 className="py-3">

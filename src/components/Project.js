@@ -5,13 +5,16 @@ import Stacks from './Stacks';
 const Project = (props) => {
   const { project } = props;
   const {
-    title, url, live, source, description, stacks,
+    title, url, live, source, description, stacks, id,
   } = project;
 
   return (
-    <article className="my-1">
+    <article className="my-1 my-md-2">
 
-      <div className="d-flex align-items-center flex-column">
+      <div className={
+        `d-flex flex-column align-items-center justify-content-md-center project ${id % 2 === 0 ? 'flex-md-row-reverse' : 'flex-md-row'}`
+      }
+      >
         <div className="col-sm-12 col-md-6 my-1">
           <img src={url} alt="" className="img-fluid img4 article-img" />
         </div>

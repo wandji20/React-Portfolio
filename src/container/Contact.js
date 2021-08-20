@@ -5,9 +5,9 @@ const Contact = () => (
   <section id="contact" className="container-fluid px-3 py-2">
     <h3>Contact</h3>
     <hr />
-    <div className="d-md-flex justify-content-center pb-1">
-      <div className="d-none d-md-flex flex-column align-items-start">
-        <h5>
+    <div className="d-md-flex justify-content-center align-items-center pb-2">
+      <div className="d-none d-md-flex flex-column align-items-start col-md-6 p-0 mx-md-1 ">
+        <h5 className="contact-text">
           <span className="d-block"> Talk is cheap. </span>
           <span className="d-block">
             Do reach out in case you need a collaborator,
@@ -19,24 +19,26 @@ const Contact = () => (
         </h5>
         <ContactLinks />
       </div>
-      <form className="form " action="">
-        <label htmlFor="name">
+      <form className="form col-md-6 p-0 align-self-md-start" action="">
+        <label className="w-100 p-0 col-md-12" htmlFor="name">
           Name
-          <input className="w-100" type="text" name="" id="name" />
+          <input className="w-100 p-0 col-md-12" type="text" name="" id="name" />
         </label>
-        <label htmlFor="email">
+        <label className="w-100 p-0 col-md-12" htmlFor="email">
           Email
-          <input className="w-100" type="email" id="email" />
+          <input className="w-100 p-0 col-md-12" type="email" id="email" />
         </label>
-        <label htmlFor="url">
+        <label className="w-100 p-0 col-md-12" htmlFor="url">
           Website / url
-          <input className="w-100" type="url" id="url" />
+          <input className="w-100 p-0 col-md-12" type="url" id="url" />
         </label>
-        <label htmlFor="message">
+        <label className="w-100 p-0 col-md-12" htmlFor="message">
           Comment / Message
-          <textarea className="w-100" name="" id="message" cols="20" rows="7" />
+          <textarea className="w-100 p-0 col-md-12" name="" id="message" rows="4" />
         </label>
-        <input className="submit-btn w-100" type="button" value="get in touch" />
+        <label className="w-100 px-0 col-md-12" htmlFor="submit">
+          <input className="submit-btn w-100" type="button" value="get in touch" />
+        </label>
       </form>
     </div>
   </section>
