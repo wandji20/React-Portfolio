@@ -23,6 +23,10 @@ body {
   max-width: 100%;
 }
 
+/* .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+} */
 .navbar-brand {
   font-weight: 600;
   font-size: 35px;
@@ -46,10 +50,39 @@ body {
   color: #0760fe;
 }
 
+#header,
+#home,
+#projects,
+#skills,
+#contact {
+  border: 1px solid red;
+  /* margin-top: 5px; */
+}
+
 .navbar-brand:hover {
   transform: scale(0.75);
 }
 .navbar-brand a:hover {
+  color: #0760fe;
+}
+
+#home h2 {
+  color: #0760fe;
+  font-family: "Roboto Mono", monospace;
+}
+
+#home .d-block {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.contact-links a {
+  font-size: 25px;
+  color: #c5c5c5;
+  transition: 0.75s;
+}
+
+.contact-links a:hover {
   color: #0760fe;
 }
 /* hr {

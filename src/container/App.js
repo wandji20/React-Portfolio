@@ -1,5 +1,5 @@
 import Contact from './Contact';
-import Intro from './Intro';
+import Home from './Home';
 import Nav from './Nav';
 import Projects from './Projects';
 import Skills from './Skills';
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Intro />
+      <Home />
       <Projects />
       <Skills />
       <Contact />
