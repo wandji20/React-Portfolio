@@ -1,11 +1,13 @@
 import NavItem from '../components/NavItem';
 
 const Nav = () => (
-  <header className="container remove-padding bg-dark" id="header">
+  <header className="container remove-padding" id="header m-auto">
 
-    <nav className="container-fluid navbar navbar-expand-lg navbar-dark">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#home">Wandji</a>
+    <nav className="w-100 p-0 navbar navbar-expand-lg align-items-center ">
+      <div className="container-fluid w-100">
+        <h3 className="navbar-brand m-auto">
+          <a href="#home">Wandji</a>
+        </h3>
         <button
           className="navbar-toggler"
           type="button"

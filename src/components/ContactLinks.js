@@ -1,35 +1,39 @@
 import React from 'react';
-import { Github, Linkedin, Twitter } from 'react-bootstrap-icons';
 
 const ContactLinks = () => (
-  <div className="main-icons">
-    <a
-      href="https://github.com/wandji20"
-      target="_blank"
-      className="icon"
-      rel="noreferrer"
-    >
-      <Github />
-    </a>
+  <div className="">
+    <span className="d-inline-block mr-2 text-light">
+      <a
+        href="https://github.com/wandji20"
+        target="_blank"
+        className="icon"
+        rel="noreferrer"
+      >
+        <i className="fab fa-github" />
+      </a>
+    </span>
 
-    <a
-      href="https://www.linkedin.com/in/wandji-bertrand/"
-      target="_blank"
-      className="icon"
-      rel="noreferrer"
-    >
-      <Linkedin />
-    </a>
+    <span className="d-inline-block mr-2">
+      <a
+        href="https://www.linkedin.com/in/wandji-bertrand/"
+        target="_blank"
+        className="icon"
+        rel="noreferrer"
+      >
+        <i className="fab fa-linkedin" />
+      </a>
+    </span>
 
-    <a
-      href="https://twitter.com/wandjibertrand"
-      target="_blank"
-      className="icon"
-      rel="noreferrer"
-    >
-      <Twitter />
-    </a>
-
+    <span className="d-inline-block mr-2">
+      <a
+        href="https://twitter.com/wandjibertrand"
+        target="_blank"
+        className="icon"
+        rel="noreferrer"
+      >
+        <i className="fab fa-twitter" />
+      </a>
+    </span>
   </div>
 );
 
