@@ -108,8 +108,13 @@ body {
   background: #1a1a1a;
 }
 
-hr {
+.hr {
   border-top: 2px solid#c5c5c5;
+}
+
+.form input,
+.form textarea {
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 600px) {

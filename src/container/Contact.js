@@ -2,11 +2,11 @@ import React from 'react';
 import ContactLinks from '../components/ContactLinks';
 
 const Contact = () => (
-  <section id="contact" className="container-fluid px-3 py-2">
+  <section id="contact" className="container-fluid">
     <h3>Contact</h3>
-    <hr />
-    <div className="d-md-flex justify-content-center align-items-center pb-2">
-      <div className="d-none d-md-flex flex-column align-items-start col-md-6 p-0 mx-md-1 ">
+    <hr className="hr" />
+    <div className="d-md-flex justify-content-center align-items-center ">
+      <div className="d-none d-md-flex flex-column align-items-start col-md-6">
         <h5 className="contact-text">
           <span className="d-block"> Talk is cheap. </span>
           <span className="d-block">

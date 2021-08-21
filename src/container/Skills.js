@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Skills = () => (
-  <section id="skills" className="container-fluid d-flex flex-column px-3 py-2">
+  <section id="skills" className="container-fluid d-flex flex-column">
     <h3 className="">Skills</h3>
     <span>
-      <hr />
+      <hr className="hr" />
     </span>
-    <div className="skills d-flex ">
+    <div className="skills d-flex">
       <div className="mr-3 mr-md-4">
         <h6 className="my-md-4 ">ROR</h6>
         <h6 className="my-md-4">Ruby</h6>

@@ -15,10 +15,10 @@ const Project = (props) => {
         `d-flex flex-column align-items-center justify-content-md-center project ${id % 2 === 0 ? 'flex-md-row-reverse' : 'flex-md-row'}`
       }
       >
-        <div className="col-sm-12 col-md-6 my-1">
+        <div className="col-sm-12 col-md-6 my-1 px-0">
           <img src={url} alt="" className="img-fluid img4 article-img" />
         </div>
-        <div className="col-sm-12 col-md-6 pt-1 my-1">
+        <div className="col-sm-12 col-md-6 pt-1 my-1 px-0">
           <div className="d-flex flex-column">
             <h5 className="project-title ">{title}</h5>
             <p>
