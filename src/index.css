@@ -1,13 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Archivo Narrow", sans-serif;
+  margin: auto;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 18px;
+  color: #c5c5c5;
+  background: #1a1a1a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100%;
+  height: 100%;
 }
+
+.remove-padding {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  transition: transform 0.75s;
+}
+
+.navbar-brand a,
+.nav-link {
+  color: #c5c5c5;
+  text-decoration: none;
+  transition: transform 0.75s;
+}
+
+.nav-item,
+.project-title {
+  color: #c5c5c5;
+  font-family: "Roboto Mono", monospace;
+}
+
+.nav-link:hover {
+  transform: scale(1.5);
+  color: #0760fe;
+}
+
+/* #header,
+#home,
+#projects,
+#skills,
+#contact {
+  border: 1px solid red;
+} */
+
+.navbar-brand:hover {
+  transform: scale(0.75);
+}
+
+#home h2,
+#projects h3,
+#skills h3,
+#contact h3,
+.form {
+  color: #0760fe;
+  font-family: "Roboto Mono", monospace;
+}
+
+.form {
+  width: 85%;
+  font-weight: 600;
+}
+
+.submit-btn {
+  font-weight: 600;
+  background: #c5c5c5;
+  text-shadow: none;
+}
+
+#home .d-block {
+  font-weight: 600;
+}
+
+.project-links a span,
+.project-links a i,
+.contact-links a {
+  text-decoration: none;
+  color: #c5c5c5;
+  transition: 0.75s;
+}
+
+.project-links a:hover {
+  text-decoration: none;
+}
+
+.project-links a span:hover,
+.project-links a i:hover,
+.navbar-brand a:hover,
+.contact-links a:hover {
+  color: #0760fe;
+  text-decoration: none;
+}
+
+.stacks .btn {
+  transition: 0.5s;
+  background: #c5c5c5;
+  font-size: 15px;
+  border: none;
+}
+
+.stacks .btn:hover {
+  color: #0760fe;
+  background: #1a1a1a;
+}
+
+.hr {
+  border-top: 2px solid#c5c5c5;
+}
+
+.form input,
+.form textarea {
+  border-radius: 5px;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .project {
+    font-size: 20px;
+  }
+
+  /* .project div {
+    width: 90%;
+  } */
+
+  .navbar-brand {
+    font-size: 25px;
+  }
+
+  .skills h6 {
+    font-size: 22px;
+  }
+
+  .project h5 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  #home h3 {
+    font-size: 35px;
+  }
+
+  #home h2,
+  #projects h3,
+  #skills h3,
+  #contact h3 {
+    font-size: 30px;
+  }
+
+  .contact-text {
+    font-family: "Roboto Mono", monospace;
+    font-size: 22px;
+    line-height: 2;
+  }
+
+  .contact-links {
+    font-size: 25px;
+  }
+}
+
+/* @media screen and (min-width: 998px) {
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+} */
