@@ -3,7 +3,7 @@ import NavItem from '../components/NavItem';
 const Nav = () => (
   <header className="container remove-padding" id="header">
 
-    <nav className="w-100 navbar navbar-expand-md align-items-center navbar-dark container-fluid">
+    <nav className="w-100 navbar navbar-expand-md align-items-center navbar-dark container-fluid px-md-0">
       <div className="container-fluid w-100 d-flex ">
         <h3 className="navbar-brand ">
           <a href="#home">Wandji</a>

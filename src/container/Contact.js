@@ -6,7 +6,7 @@ const Contact = () => (
     <h3>Contact</h3>
     <hr className="hr" />
     <div className="d-md-flex justify-content-center align-items-center ">
-      <div className="d-none d-md-flex flex-column align-items-start col-md-6">
+      <div className="d-none d-md-flex flex-column align-items-start col-md-6 p-0">
         <h5 className="contact-text">
           <span className="d-block"> Talk is cheap. </span>
           <span className="d-block">

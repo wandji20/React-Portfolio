@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 const Stacks = (props) => {
   const { stacks } = props;
   return (
-    <p className="d-flex flex-wrap stacks">
+    <p className="d-flex flex-wrap mt-1 mb-0 stacks mb-md-1">
       {
         stacks.map((stack) => (
-          <button className="btn m-1 px-1 py-0" type="button" key={stack}>
+          <button className="btn my-1 mr-2 py-0 px-1" type="button" key={stack}>
             {stack}
           </button>
         ))
