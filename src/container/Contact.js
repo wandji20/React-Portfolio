@@ -16,7 +16,11 @@ const Contact = () => {
     setEmail('');
     setWebsite('');
     setMessage('');
-    console.log(data);
+    if (name !== '' && email !== '' && message !== '') {
+      console.log(data);
+    } else {
+      // Show Modal
+    }
   };
   return (
     <section id="contact" className="container-fluid">
@@ -48,6 +52,7 @@ const Contact = () => {
               type="text"
               name=""
               value={name}
+              required
               id="name"
               onChange={(e) => setName(e.target.value)}
             />
@@ -56,6 +61,7 @@ const Contact = () => {
             Email
             <input
               className="w-100 p-0 col-md-12"
+              required
               type="email"
               id="email"
               value={email}
@@ -78,6 +84,7 @@ const Contact = () => {
               className="w-100 p-0 col-md-12"
               name=""
               id="message"
+              required
               value={message}
               rows="4"
               onChange={(e) => setMessage(e.target.value)}
