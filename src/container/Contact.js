@@ -1,6 +1,7 @@
 import emailjs from 'emailjs-com';
 import React, { useState } from 'react';
 import ContactLinks from '../components/ContactLinks';
+import Modal from '../components/presentation/Modal';
 import apikey from '../email';
 
 const Contact = () => {
@@ -8,8 +9,9 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [website, setWebsite] = useState('');
   const [message, setMessage] = useState('');
-  // const [status, setStatus] = useState(false);
-  // const [error, setError] = useState('');
+  const [visible, setVisible] = useState(false);
+  const [result, setResult] = useState('');
+  const [error, setError] = useState('');
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -21,18 +23,27 @@ const Contact = () => {
     setWebsite('');
     setMessage('');
 
-    emailjs.sendForm('gmail', apikey.TEMPLATE_ID, e.target, apikey.USER_ID)
+    emailjs.sendForm('mail', apikey.TEMPLATE_ID, e.target, apikey.USER_ID)
       .then((result) => {
-        alert('Thank you for reaching out!', result.text);
+        setVisible(true);
+        setResult(result.text);
       },
       (error) => {
-        alert('An error occurred, Please try again', error.text);
+        setVisible(true);
+        setError(error.text);
       });
+  };
+
+  const handleVisibility = () => {
+    setVisible(false);
   };
   return (
     <section id="contact" className="container-fluid">
       <h3>Contact</h3>
       <hr className="hr" />
+      {
+        visible && <Modal error={error} result={result} handleVisibility={handleVisibility} />
+      }
       <div className="d-md-flex justify-content-center align-items-center ">
         <div className="d-none d-md-flex flex-column align-items-start col-md-6 p-0">
           <h5 className="contact-text">
