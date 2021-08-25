@@ -1,26 +1,33 @@
+import emailjs from 'emailjs-com';
 import React, { useState } from 'react';
 import ContactLinks from '../components/ContactLinks';
+import apikey from '../email';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [website, setWebsite] = useState('');
   const [message, setMessage] = useState('');
+  // const [status, setStatus] = useState(false);
+  // const [error, setError] = useState('');
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      name, email, website, message,
-    };
+    // const data = {
+    //   name, email, website, message,
+    // };
     setName('');
     setEmail('');
     setWebsite('');
     setMessage('');
-    if (name !== '' && email !== '' && message !== '') {
-      console.log(data);
-    } else {
-      // Show Modal
-    }
+
+    emailjs.sendForm('gmail', apikey.TEMPLATE_ID, e.target, apikey.USER_ID)
+      .then((result) => {
+        alert('Thank you for reaching out!', result.text);
+      },
+      (error) => {
+        alert('An error occurred, Please try again', error.text);
+      });
   };
   return (
     <section id="contact" className="container-fluid">
@@ -42,7 +49,6 @@ const Contact = () => {
         </div>
         <form
           className="form col-md-6 p-0 align-self-md-start"
-          action=""
           onSubmit={handleFormSubmit}
         >
           <label className="w-100 p-0 col-md-12" htmlFor="name">
@@ -52,7 +58,7 @@ const Contact = () => {
               type="text"
               name=""
               value={name}
-              required
+              // required
               id="name"
               onChange={(e) => setName(e.target.value)}
             />
@@ -61,7 +67,7 @@ const Contact = () => {
             Email
             <input
               className="w-100 p-0 col-md-12"
-              required
+              // required
               type="email"
               id="email"
               value={email}
@@ -84,7 +90,7 @@ const Contact = () => {
               className="w-100 p-0 col-md-12"
               name=""
               id="message"
-              required
+              // required
               value={message}
               rows="4"
               onChange={(e) => setMessage(e.target.value)}
