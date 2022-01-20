@@ -1,8 +1,9 @@
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
+/* eslint-disable */
 import React, { useState } from 'react';
-import ContactLinks from '../components/ContactLinks';
-import Modal from '../components/presentation/Modal';
-import apikey from '../email';
+import ContactLinks from '../presentation/ContactLinks';
+import Modal from '../presentation/Modal';
+import sendEmail from '../../api/api';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -13,25 +14,35 @@ const Contact = () => {
   const [result, setResult] = useState('');
   const [error, setError] = useState('');
 
+  // const { REACT_APP_USER_ID, REACT_APP_TEMPLATE_ID } = process.env;
+
+  // const clearState = () => {
+  //   setName('');
+  //   setEmail('');
+  //   setWebsite('');
+  //   setMessage('');
+  // };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // const data = {
-    //   name, email, website, message,
-    // };
-    setName('');
-    setEmail('');
-    setWebsite('');
-    setMessage('');
+    const data = {
+      name, email, website, message,
+    };
+    sendEmail(data);
 
-    emailjs.sendForm('mail', apikey.TEMPLATE_ID, e.target, apikey.USER_ID)
-      .then((result) => {
-        setVisible(true);
-        setResult(result.text);
-      },
-      (error) => {
-        setVisible(true);
-        setError(error.text);
-      });
+    // if (name !== '' && email !== '' && message !== '') {
+    //   emailjs.sendForm('gmail', REACT_APP_TEMPLATE_ID, e.target, REACT_APP_USER_ID)
+    //     .then((result) => {
+    //       setResult(result.text);
+    //       console.log(result);
+    //       // clearState();
+    //       setVisible(true);
+    //     },
+    //     (error) => {
+    //       setVisible(true);
+    //       setError(error.text);
+    //     });
+    // }
   };
 
   const handleVisibility = () => {
@@ -59,7 +70,7 @@ const Contact = () => {
           <ContactLinks />
         </div>
         <form
-          className="form col-md-6 p-0 align-self-md-start"
+          className="contact-formform col-md-6 p-0 align-self-md-start"
           onSubmit={handleFormSubmit}
         >
           <label className="w-100 p-0 col-md-12" htmlFor="name">

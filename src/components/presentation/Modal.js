@@ -18,7 +18,7 @@ const Modal = (props) => {
       {
         result !== ''
           && (
-          <p className="text-success m-auto text-center">
+          <p className="text-dark m-auto text-center">
             Thank you for reaching out!
           </p>
           )

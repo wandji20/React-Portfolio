@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactLinks from '../components/ContactLinks';
+import ContactLinks from '../presentation/ContactLinks';
 
 const Home = () => (
   <section id="home" className="container-fluid">
