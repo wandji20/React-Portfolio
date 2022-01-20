@@ -1,4 +1,4 @@
-import NavItem from '../components/NavItem';
+import NavItem from '../presentation/NavItem';
 
 const Nav = () => (
   <header className="container remove-padding" id="header">

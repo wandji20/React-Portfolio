@@ -1,6 +1,6 @@
 import React from 'react';
-import Project from '../components/Project';
-import projects from '../constants';
+import Project from '../presentation/Project';
+import projects from '../../constants';
 
 const Projects = () => (
   <section id="projects" className="container-fluid">
