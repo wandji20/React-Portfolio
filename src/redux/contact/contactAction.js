@@ -1,4 +1,3 @@
-// /* eslint-disable */
 export const API_RESPONSE_MESSAGE = 'contact/response/message';
 export const API_RESPONSE_ERROR = 'contact/response/error';
 export const CONTACT = 'contact/email';

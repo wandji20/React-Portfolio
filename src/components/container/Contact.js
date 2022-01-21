@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ContactLinks from '../presentation/ContactLinks';
 import { postEmailAction } from '../../redux/contact/contactAction';
+import Notification from '../presentation/Notification';
 
 const Contact = () => {
   const { sender } = useSelector((state) => state.contactReducer);
@@ -37,6 +38,7 @@ const Contact = () => {
       <h3>Contact</h3>
       <hr className="hr" />
 
+      <Notification />
       <div className="d-md-flex justify-content-center align-items-center mb-2 ">
         <div className="d-none d-md-flex flex-column align-items-start col-md-6 p-0">
           <h5 className="contact-text">
@@ -62,7 +64,7 @@ const Contact = () => {
               type="text"
               name=""
               value={name}
-              // required
+              required
               id="name"
               onChange={(e) => setName(e.target.value)}
             />
@@ -71,7 +73,7 @@ const Contact = () => {
             Email
             <input
               className="form-control w-100 ps-2 col-md-12"
-              // required
+              required
               type="email"
               id="email"
               value={email}
@@ -94,7 +96,7 @@ const Contact = () => {
               className="form-control w-100 px-2 col-md-12"
               name=""
               id="message"
-              // required
+              required
               value={message}
               rows="4"
               onChange={(e) => setMessage(e.target.value)}
