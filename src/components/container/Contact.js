@@ -1,25 +1,36 @@
-/* eslint-disable */
-import React, { useState } from 'react';
+// /* eslint-disable */
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import ContactLinks from '../presentation/ContactLinks';
-import sendEmail from '../../api/api';
+import { postEmailAction } from '../../redux/contact/contactAction';
 
 const Contact = () => {
+  const { sender } = useSelector((state) => state.contactReducer);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [website, setWebsite] = useState('');
   const [message, setMessage] = useState('');
 
+  const clearForm = () => {
+    setName(sender.name);
+    setWebsite(sender.website);
+    setEmail(sender.email);
+    setMessage(sender.message);
+  };
 
+  const dispatch = useDispatch();
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
     const data = {
       name, email, website, message,
     };
-    console.log(data);
-    // sendEmail(data);
-
+    e.preventDefault();
+    dispatch(postEmailAction(data));
   };
+
+  useEffect(() => {
+    clearForm();
+  }, [sender]);
 
   return (
     <section id="contact" className="container-fluid">
