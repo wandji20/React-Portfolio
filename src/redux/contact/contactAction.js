@@ -50,9 +50,3 @@ export const postEmailAction = (data) => async (dispatch) => {
     }, 5000);
   }
 };
-
-// const cleanUp = (action, payload) => {
-//   setTimeout(()=> {
-//     dispatch(action(payload));
-//   }, 3000)
-// }
