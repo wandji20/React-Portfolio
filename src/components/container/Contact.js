@@ -1,4 +1,3 @@
-// /* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ContactLinks from '../presentation/ContactLinks';
@@ -42,11 +41,12 @@ const Contact = () => {
       <div className="d-md-flex justify-content-center align-items-center mb-2 ">
         <div className="d-none d-md-flex flex-column align-items-start col-md-6 p-0">
           <h5 className="contact-text">
-            <span className="d-block"> Talk is cheap. </span>
-            <span className="d-block">
-              Do reach out in case you need a collaborator,
+            <span className="d-block pe-2">
+              Reach out if you need a collaborator,
+              <br />
               have a feature you need to be implemented,
-              want to build an app, or just want to talk.
+              <br />
+              or want to build an app.
             </span>
             <br />
             <span className="d-block">Email: wbertrand10@gmail.com</span>
