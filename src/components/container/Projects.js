@@ -4,7 +4,7 @@ import projects from '../../constants';
 
 const Projects = () => (
   <section id="projects" className="container-fluid">
-    <h3 className="">Projects</h3>
+    <h3 className="">My Projects</h3>
     <hr className="hr" />
     <div className="projects w-100 d-flex flex-column">
       {

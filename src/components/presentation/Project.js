@@ -43,7 +43,7 @@ const Project = (props) => {
 };
 
 Project.propTypes = {
-  project: PropTypes.objectOf(PropTypes.any).isRequired,
+  project: PropTypes.shape().isRequired,
 };
 
 export default Project;

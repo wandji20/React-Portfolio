@@ -1,7 +1,7 @@
 /* eslint-disable */
 const sendEmail = async (data) => {
   // const URL = 'http://localhost:3001/api/v1/portfolio/';
-  const URL = 'https://email-api-wandji.herokuapp.com/';
+  const URL = 'https://email-api-wandji.herokuapp.com/api/v1/portfolio';
 
   try {
     const server = await fetch(URL, {

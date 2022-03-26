@@ -1,68 +1,52 @@
-// import emailjs from 'emailjs-com';
-/* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import ContactLinks from '../presentation/ContactLinks';
-import Modal from '../presentation/Modal';
-import sendEmail from '../../api/api';
+import { postEmailAction } from '../../redux/contact/contactAction';
+import Notification from '../presentation/Notification';
 
 const Contact = () => {
+  const { sender } = useSelector((state) => state.contactReducer);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [website, setWebsite] = useState('');
   const [message, setMessage] = useState('');
-  const [visible, setVisible] = useState(false);
-  const [result, setResult] = useState('');
-  const [error, setError] = useState('');
 
-  // const { REACT_APP_USER_ID, REACT_APP_TEMPLATE_ID } = process.env;
+  const clearForm = () => {
+    setName(sender.name);
+    setWebsite(sender.website);
+    setEmail(sender.email);
+    setMessage(sender.message);
+  };
 
-  // const clearState = () => {
-  //   setName('');
-  //   setEmail('');
-  //   setWebsite('');
-  //   setMessage('');
-  // };
+  const dispatch = useDispatch();
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
     const data = {
       name, email, website, message,
     };
-    sendEmail(data);
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   emailjs.sendForm('gmail', REACT_APP_TEMPLATE_ID, e.target, REACT_APP_USER_ID)
-    //     .then((result) => {
-    //       setResult(result.text);
-    //       console.log(result);
-    //       // clearState();
-    //       setVisible(true);
-    //     },
-    //     (error) => {
-    //       setVisible(true);
-    //       setError(error.text);
-    //     });
-    // }
+    e.preventDefault();
+    dispatch(postEmailAction(data));
   };
 
-  const handleVisibility = () => {
-    setVisible(false);
-  };
+  useEffect(() => {
+    clearForm();
+  }, [sender]);
+
   return (
     <section id="contact" className="container-fluid">
       <h3>Contact</h3>
       <hr className="hr" />
-      {
-        visible && <Modal error={error} result={result} handleVisibility={handleVisibility} />
-      }
-      <div className="d-md-flex justify-content-center align-items-center ">
+
+      <Notification />
+      <div className="d-md-flex justify-content-center align-items-center mb-2 ">
         <div className="d-none d-md-flex flex-column align-items-start col-md-6 p-0">
           <h5 className="contact-text">
-            <span className="d-block"> Talk is cheap. </span>
-            <span className="d-block">
-              Do reach out in case you need a collaborator,
+            <span className="d-block pe-2">
+              Reach out if you need a collaborator,
+              <br />
               have a feature you need to be implemented,
-              want to build an app, or just want to talk.
+              <br />
+              or want to build an app.
             </span>
             <br />
             <span className="d-block">Email: wbertrand10@gmail.com</span>
@@ -70,57 +54,57 @@ const Contact = () => {
           <ContactLinks />
         </div>
         <form
-          className="contact-formform col-md-6 p-0 align-self-md-start"
+          className="contact-formform col-md-6 p-0 align-self-md-start  pb-2"
           onSubmit={handleFormSubmit}
         >
-          <label className="w-100 p-0 col-md-12" htmlFor="name">
+          <label className="form-label w-100 p-0 col-md-12" htmlFor="name">
             Name
             <input
-              className="w-100 p-0 col-md-12"
+              className="form-control w-100 ps-2 col-md-12"
               type="text"
               name=""
               value={name}
-              // required
+              required
               id="name"
               onChange={(e) => setName(e.target.value)}
             />
           </label>
-          <label className="w-100 p-0 col-md-12" htmlFor="email">
+          <label className="form-label w-100 p-0 col-md-12" htmlFor="email">
             Email
             <input
-              className="w-100 p-0 col-md-12"
-              // required
+              className="form-control w-100 ps-2 col-md-12"
+              required
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
-          <label className="w-100 p-0 col-md-12" htmlFor="url">
+          <label className="form-label w-100 p-0 col-md-12" htmlFor="url">
             Website / url
             <input
-              className="w-100 p-0 col-md-12"
+              className="form-control w-100 ps-2 col-md-12"
               type="url"
               id="url"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
             />
           </label>
-          <label className="w-100 p-0 col-md-12" htmlFor="message">
+          <label className="form-label w-100 p-0 col-md-12" htmlFor="message">
             Comment / Message
             <textarea
-              className="w-100 p-0 col-md-12"
+              className="form-control w-100 px-2 col-md-12"
               name=""
               id="message"
-              // required
+              required
               value={message}
               rows="4"
               onChange={(e) => setMessage(e.target.value)}
             />
           </label>
-          <label className="w-100 px-0 col-md-12" htmlFor="submit">
+          <label className="form-label w-100 px-0 col-md-12" htmlFor="submit">
             <input
-              className="submit-btn w-100"
+              className=" form-submit btn submit-btn w-100"
               type="submit"
               value="get in touch"
             />
