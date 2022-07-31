@@ -11,7 +11,7 @@ const projects = [
     title: 'Quiz Center',
     url: quizCenter,
     description: 'A React front-end platform using Apollo and GraphQL to connect with a Rails API. Signed-up users can take different quizzes (only once). Also, users can resume a particular quiz at any time with each question answerable just once.',
-    stacks: ['Ruby on Rails', 'React', 'JavaScript', 'Bootstrap', 'Apollo Client', 'GraphQL', 'HTML', 'CSS'],
+    stacks: ['Ruby on Rails', 'React', 'JavaScript', 'Apollo Client', 'GraphQL', 'Bootstrap', 'HTML', 'CSS'],
     source: 'https://github.com/wandji20/quiz-center-front',
     live: 'https://quiz-center-front.netlify.app/',
   },
