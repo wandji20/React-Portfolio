@@ -20,7 +20,7 @@ const projects = [
     title: 'Sneakers Hub',
     url: sneakers,
     description: 'A reactive-rails e-commerce application using Stripe web UI for payments. Users can browse, filter, and search for sneakers all done with turbo-frames. Build with just Rails and used Hotwire to make it reactive and email handling is deferred to a Sidekiq background job.',
-    stacks: ['Ruby on Rails', 'Redis', 'SideKiq', 'Turbo-rails', 'Bootstrap'],
+    stacks: ['Ruby on Rails', 'Redis', 'SideKiq', 'Hotwire', 'Stimulus JS', 'Bootstrap'],
     live: 'https://sneakers-hub.herokuapp.com/',
     source: 'https://github.com/wandji20/sneakers-hub/',
   },
