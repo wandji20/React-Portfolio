@@ -16,7 +16,7 @@ export const emailAction = (data) => ({
 
 export const postEmailAction = (data) => async (dispatch) => {
   // const URL = 'http://localhost:3001/api/v1/portfolio/';
-  const URL = 'https://email-api-wandji.herokuapp.com/api/v1/portfolio';
+  const URL = 'https://email-api.fly.dev/api/v1/portfolio/';
   const payload = {
     name: '', email: '', website: '', message: '',
   };
