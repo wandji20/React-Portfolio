@@ -40,7 +40,7 @@ const projects = [
     description: ' A Rails app that allows users to create an account and view articles organized by category. Also, users can create, upvote, and downvote articles.',
     stacks: ['Ruby on Rails', 'HTML', 'Bootstrap', 'CSS'],
     source: 'https://github.com/wandji20/Culture-Educate',
-    live: 'https://culture-educate-wandji.herokuapp.com/',
+    live: 'https://chat-blog-app.fly.dev/',
   },
   // {
   //   title: 'Todo App',
